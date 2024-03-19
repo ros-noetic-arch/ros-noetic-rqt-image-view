@@ -4,7 +4,7 @@ url='https://wiki.ros.org/rqt_image_view'
 pkgname='ros-noetic-rqt-image-view'
 pkgver='0.4.17'
 arch=('i686' 'x86_64' 'aarch64' 'armv7h' 'armv6h')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
 ros_makedepends=(
@@ -38,9 +38,10 @@ depends=(
 	${ros_depends[@]}
 )
 
-_dir="rqt_image_view-${pkgver}/"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_image_view/archive/${pkgver}.tar.gz")
-sha256sums=('cf4d76d02fc83220ece6837e1eca7423e0ee84b3ee03f1e2b5851ef20f4f5119')
+_commit="3803409bd001ca0583f8cc2a80941f53488afc2c"
+_dir="rqt_image_view-${_commit}/"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_image_view/archive/${_commit}.tar.gz")
+sha256sums=('e1678c198dc92d5e4b5b3a7c4485c9f9ac20a5d04f492063430ae4925fdce6a7')
 
 build() {
 	# Use ROS environment variables.
